@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/* 레이아웃 */
+#footer { border-top: 1px solid #ddd; }
+
+/* 컨텐츠 */
+#contents { padding-top: 40px; padding-bottom: 40px; min-height: 600px; }
+
+.posts-list li { padding: 5px 0; }

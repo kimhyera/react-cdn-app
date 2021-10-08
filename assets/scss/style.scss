@@ -1,0 +1,53 @@
+//var
+$primary: #3f51b5;
+
+//mixins
+@import 'mixins';
+//reset
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+/* 레이아웃 */
+html {
+	font-family: Normal;
+}
+#footer {
+	background: #f8f9fa;
+}
+
+/* 컨텐츠 */
+
+#contents {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	min-height: 600px;
+}
+.heading-lg {
+	font-size: rem(26);
+	font-family: Normal;
+	font-weight: bold;
+	line-height: 1.167;
+	margin-bottom: em(25);
+}
+.posts-list {
+	height: 600px;
+}
+.posts-list li {
+	padding: 5px 0;
+	a {
+		color: #333;
+	}
+}
+.post-title {
+	font-size: rem(24);
+}
+.post-body {
+	font-size: rem(18);
+}
+
+.post-bottom {
+	margin-top: em(40);
+	text-align: right;
+}

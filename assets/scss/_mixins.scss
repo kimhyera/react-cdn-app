@@ -1,0 +1,34 @@
+//스크롤바
+@mixin col_scroll($track: #fff, $thumb: #999) {
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+
+	&::-webkit-scrollbar-track {
+		border-radius: 10px;
+		background-color: $track;
+	}
+
+	&::-webkit-scrollbar {
+		width: 4px;
+		height: 4px;
+		background-color: $track;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: $thumb;
+	}
+}
+
+.con-scroll {
+	@include col_scroll();
+}
+
+@function em($val, $std: 16) {
+	@return ($val/$std) * 1em;
+}
+
+@function rem($val, $std: 16) {
+	@return ($val/$std) * 1rem;
+}

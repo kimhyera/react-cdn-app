@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!-- ( < IE10 ) -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!-- Viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- css -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="/assets/css/style.css" />
+		<!-- React를 실행. -->
+		<!-- 주의: 사이트를 배포할 때는 "development.js"를 "production.min.js"로 대체하세요. -->
+		<script
+			src="https://unpkg.com/react@17/umd/react.development.js"
+			crossorigin
+		></script>
+		<script
+			src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+			crossorigin
+		></script>
+		<script
+			type="application/javascript"
+			src="https://unpkg.com/babel-standalone@6.26.0/babel.js"
+		></script>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.6.2/fetch.min.js"
+			referrerpolicy="no-referrer"
+		></script>
+
+		<title>cdn React</title>
+	</head>
+
+	<body>
+		<!--header -->
+		<header id="header" class="header"></header>
+		<script type="text/babel" src="/componets/header.js"></script>
+		<!--// header -->
+
+		<!-- contents -->
+		<main id="contents" class="container">
+			<h2>메인</h2>
+		</main>
+		<!-- // contents -->
+
+		<!--footer -->
+		<footer id="footer" class="footer"></footer>
+		<script type="text/babel" src="/componets/footer.js"></script>
+		<!--// footer -->
+	</body>
+</html>
