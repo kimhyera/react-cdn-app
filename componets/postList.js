@@ -13,8 +13,8 @@ const PostList = () => {
 		});
 	}, []);
 
-	const onDelect = async (id) => {
-		const item = await fetch(
+	const onDelect = React.useCallback((id) => {
+		const item =  fetch(
 			`https://jsonplaceholder.typicode.com/posts/${id}`,
 			{
 				method: 'DELETE',
@@ -25,7 +25,7 @@ const PostList = () => {
 		//ui 삭제
 		const resultArray = posts.filter((item) => item.id !== id);
 		setPosts(resultArray);
-	};
+	});
 
 	return (
 		<React.Fragment>
