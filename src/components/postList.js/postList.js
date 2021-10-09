@@ -1,4 +1,4 @@
-import React, { memo, useState, useCallback, useEffect } from 'react';
+import React, {  useState, useCallback, useEffect } from 'react';
 
 const PostList = () => {
 	const [posts, setPosts] = useState([]);
@@ -72,4 +72,4 @@ const PostList = () => {
 	);
 };
 
-export default React.memo(PostList);
+export default PostList
