@@ -1,3 +1,13 @@
+import { GlobalState } from './common.js';
+
+const globalState = new GlobalState('false', 'khr1828')
+
+
+
+globalState.user = '김혜라리스트'
+
+console.log(globalState.user)
+
 const PostList = () => {
 	const [posts, setPosts] = React.useState([]);
 
