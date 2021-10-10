@@ -1,25 +1,45 @@
 
 
- const ListTop = React.memo(()=>{
+const Link = ReactRouterDOM.Link;
+const Route = ReactRouterDOM.Route;
 
-	return(
-<React.Fragment>
-		<h2 class="heading-lg">Post</h2>
-		<div className="text-right mb-4">
-			<a href="create.html" class="btn btn-primary ">
-				글쓰기
-			</a>
-		</div>
+    const App = () => (
+        <ReactRouterDOM.HashRouter>
 
-
-		</React.Fragment>
-
-	)
-
+<nav class="navbar navbar-expand navbar-light bg-light ">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						
+						<Link to="/" class="nav-link"> 메인</Link>
+					</li>
+					<li class="nav-item">
+					
 
 
-});
 
+						<Link to="/postList" class="nav-link">게시물</Link>
+					</li>
+					<li class="nav-item">
+				
+
+
+						<Link to="/login" class="nav-link"> 로그인</Link>
+					</li>
+				</ul>
+
+			</nav>
+
+    
+		  <Route path="/" exact component={Home} />
+ <Route path="/postList" component={PostList} />
+ <Route path="/login" component={Login} />
+        </ReactRouterDOM.HashRouter>
+
+
+)
+
+
+     const Home = () => <h1>Home</h1>
 
 
 
@@ -55,7 +75,13 @@
 	return (
 		<React.Fragment>
 
-			<ListTop/>
+<h2 class="heading-lg">Post</h2>
+		<div className="text-right mb-4">
+			<a href="create.html" class="btn btn-primary ">
+				글쓰기
+			</a>
+		</div>
+
 		
 			<ul class="posts-list pt-2 con-scroll">
 				{posts.map((item) => {
@@ -99,5 +125,9 @@
 
 
 
-ReactDOM.render(<PostList />, document.querySelector('#contents'));
 
+
+      const Login = () => <h1>Login</h1>
+	  ReactDOM.render(<App />, document.querySelector('#root'));
+
+	  
